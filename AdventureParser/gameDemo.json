@@ -1,0 +1,61 @@
+{
+    "GameName": "Cell Escape",
+    "IntroText": "You wake up in a locked room surounded by damp concrete walls.",
+  "WinText": "As you run away from the house you feel a panicked sigh of relief then call the police.",
+  "StartingRoom" : "cell",
+    "Items" : [
+      {
+        "Name": "key",
+        "RequiredItems": [],
+        "CanPickUp": false,
+        "ItemOnUse": "key",
+        "Description": "An upturned box, it looks like theres something shiny under it.",
+        "UseText": "I don't want to sit there, ew",
+        "ToRoom": "none",
+        "WinGame": false
+      },
+      {
+        "Name": "matress",
+        "RequiredItems": [],
+        "CanPickUp": false,
+        "ItemOnUse": "none",
+        "Description": "A very dirty matress. Was that a bug I just under it, ew.",
+        "UseText": "I don't want to sit there!",
+        "ToRoom": "none",
+        "WinGame": false
+      },
+      {
+        "Name" : "cell door",
+        "RequiredItems": [ "key" ],
+        "ItemOnUse": "none",
+        "Description": "The door holding you in, it looks sturdy.",
+        "UseText": "You open the door with the key.",
+        "ToRoom": "house",
+        "WinGame": false
+      },
+      {
+        "Name": "front door",
+        "RequiredItems": [],
+        "CanPickUp": false,
+        "ItemOnUse": "none",
+        "Description": "A door leading outside, it looks ajar.",
+        "UseText": "You push the door open and run.",
+        "ToRoom": "none",
+        "WinGame": true
+      }
+
+    ],
+    "Rooms": [
+      {
+        "Name" : "cell",
+        "Description": "You see an upside down box, matress, and door. The door seems too strong to break.",
+        "Items": [ "matress", "cell door", "box" ]
+      },
+
+      {
+        "Name" : "house",
+        "Description": "You walk into the entryway of a house, you notice several doors but the front door seems ajar.",
+        "Items": [ "houseDoor" ]
+      }
+    ]
+}
